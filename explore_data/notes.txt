@@ -1,0 +1,24 @@
+* Key 'author' has a list of authors.
+  * For each one, there might be
+    1. An affiliation, under 'affiliation'
+    2. A last name, under 'family'
+    3. A first name, under 'given'
+      - These are often just abbreviations
+* Key 'issued' has the earliest known publication date, whether online or in print
+* Key 'published-print' has the in-print publication date
+* Key 'published-online' has the online publication date
+* Key 'container-title' has the "Work container title, such as journal title, or book title"
+* Key 'publisher' contains a higher level publisher info than 'container-title'
+* Key 'subject' has info about the subject of the paper
+* Key 'title' has the title of the work
+* Key 'type' is 'journal-article' or 'book-chapter'
+
+One possible strategy to tag everything:
+
+1. Get a cursor to point at all records that don't have the field "author-genders"
+2. Loop through the cursor and pull author names list
+3. Analyze first name for each author, and add result to "author-genders" list
+  - Result should be non-binary
+    * Male, mostly-male, mostly-female, female, unknown-estimation_failure,
+      unknown-no_first_name, unknown-too_short_or_initials, unknown-code_failure
+4. Query to get all "author-genders" lists
