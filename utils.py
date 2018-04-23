@@ -19,7 +19,7 @@ def get_gender(detector_instance, author):
         if not len(name_sans_initials):
             return 'unknown-initials_only'
 
-        gender_estimate = d.get_gender(name)
+        gender_estimate = detector_instance.get_gender(name)
         if gender_estimate == 'unknown':
             return 'unknown-estimation_failure'
 
