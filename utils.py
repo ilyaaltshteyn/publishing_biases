@@ -38,7 +38,7 @@ def set_gender(collection, record_id, genders):
         }
     )
 
-def get_cursor():
+def get_cursor(collection):
     """ Get cursor pointing at records without the field 'author-genders'.
         Return True and a cursor if cursor has at least 1 records. Otherwise
         returns False and None. This is to avoid using .count() on big cursor.

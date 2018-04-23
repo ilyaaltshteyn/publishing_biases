@@ -26,7 +26,7 @@ finished = 0
 
 while results_exist:
     try:
-        cursor = get_cursor()
+        cursor = get_cursor(collection)
         if not cursor['empty']:
             for publication in cursor['cursor']:
                 genders = []
@@ -36,7 +36,7 @@ while results_exist:
 
                 set_gender(collection, publication['_id'], genders)
                 finished += 1
-                if finished % 10000 == 0:
+                if finished % 100000 == 0:
                     logging.info('Finished {} records so far.'.format(finished))
 
         else:
