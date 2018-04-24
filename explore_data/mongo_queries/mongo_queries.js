@@ -1,5 +1,6 @@
+use dat
 // Get just journal articles that have author genders assigned
-db.crossref.find(
+db.crossref.findOne(
   { $and :
     [
       {'author-genders' : {$exists : true } },
