@@ -1,3 +1,4 @@
+use dat
 // Get just journal articles that have author genders assigned
 db.crossref.find(
   { $and :
@@ -6,7 +7,12 @@ db.crossref.find(
       {'type' : 'journal-article'}
     ]
   },
-  {'author-genders' : 1, 'issued' : 1, 'subject' : 1, 'author' : 1}
+  {
+    'author-genders' : 1,
+    'issued' : 1,
+    'subject' : 1,
+    'author' : 1
+  }
 )
 
 // db.crossref.find(

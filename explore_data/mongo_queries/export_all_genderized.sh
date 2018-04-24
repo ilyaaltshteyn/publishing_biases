@@ -1,0 +1,1 @@
+nohup mongoexport -d dat -c crossref --type=csv --fields issued,subject,author,author-genders -q '{ "$and" : [{"author-genders" : {"$exists" : true } },{"type" : "journal-article"}]}' --out all_genderized.csv &
