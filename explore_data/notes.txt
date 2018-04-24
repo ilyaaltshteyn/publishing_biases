@@ -22,3 +22,20 @@ One possible strategy to tag everything:
     * Male, mostly-male, mostly-female, female, unknown-estimation_failure,
       unknown-no_first_name, unknown-too_short_or_initials, unknown-code_failure
 4. Query to get all "author-genders" lists
+
+# Organize dataset for some analysis. Why did I even put it into mongo :P
+- I need to get the count of each author-gender in each authorship position,
+  by month and by topic.
+  * One possible approach:
+    1. Index by date and pub type (DONE)
+    2. Write author lists for each month/topic into a separate file.
+      - Organize folders: month_year > topic
+      - QUERY (replace date/month):
+      {'$and' :
+        [
+          {'author-genders' : {'$exists' : true}},
+          {'type' : 'journal-article'}
+          {'issued.date-parts.0.0' : 2017},
+          {'issued.date-parts.0.1' : 1},
+        ]
+      }, {'author-genders' : 1, 'subject'})

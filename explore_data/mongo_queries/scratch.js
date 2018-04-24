@@ -23,3 +23,17 @@ db.crossref.findOne(
 //     ]
 //   }
 // ).count()
+
+
+// Get date from date-parts
+db.crossref.findOne({'issued.date-parts.0.0' : 2017})
+
+// Get author-genders for a given year and month
+db.findOne({'$and' :
+  [
+    {'author-genders' : {'$exists' : true}},
+    {'type' : 'journal-article'}
+    {'issued.date-parts.0.0' : 2017},
+    {'issued.date-parts.0.1' : 1},
+  ]
+}, {'author-genders' : 1})
