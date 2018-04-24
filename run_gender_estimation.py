@@ -37,7 +37,7 @@ while results_exist:
                 set_gender(collection, publication['_id'], genders)
                 finished += 1
                 if finished % 100000 == 0:
-                    logging.info('Finished {} records so far.'.format(finished))
+                    logging.info('Finished {} records so far; Time is {}'.format(finished, datetime.now()))
 
         else:
             results_exist = False
