@@ -1,8 +1,8 @@
 use dat
 var mapFunction1 = function() {
   var yr = String(this.issued['date-parts'][0][0])
-  var mo = String(this.issued['date-parts'][0][0])
-  if (this['author-gender'] == 'female') {
+  var mo = String(this.issued['date-parts'][0][1])
+  if (this['author-gender'].length > 1 && this['author-gender'][1] == 'female') {
     var first_auth_female = 1
   } else {
     var first_auth_female = 0
@@ -17,5 +17,5 @@ var reduceFunction1 = function(yr_mo, f) {
 db.crossref.mapReduce(
                      mapFunction1,
                      reduceFunction1,
-                     { out: "female_first_author_by_yr_mo_counts" }
+                     { out: "female_second_author_by_yr_mo_counts" }
                    )
