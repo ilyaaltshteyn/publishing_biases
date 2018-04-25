@@ -34,8 +34,8 @@ One possible strategy to tag everything:
       {'$and' :
         [
           {'author-genders' : {'$exists' : true}},
-          {'type' : 'journal-article'}
-          {'issued.date-parts.0.0' : 2017},
-          {'issued.date-parts.0.1' : 1},
+          {'type' : 'journal-article'},
+          {'issued.date-parts.0.0' : 1990},
+          {'issued.date-parts.0.1' : 1}
         ]
-      }, {'author-genders' : 1, 'subject'})
+      }, {'author-genders' : 1, 'subject' : 1})
