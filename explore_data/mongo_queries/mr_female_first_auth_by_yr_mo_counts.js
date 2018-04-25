@@ -1,26 +1,31 @@
 use dat
+
 var mapFunction1 = function() {
-  var yr = String(this.issued['date-parts'][0][0])
-  var mo = String(this.issued['date-parts'][0][1])
-  if (this['author-gender'].length > 1 && this['author-gender'][0] == 'female') {
-    var first_auth_female = 1
+  var yr = String(this.issued['date-parts'][0][0]);
+  var mo = String(this.issued['date-parts'][0][1]);
+  var dat_ok = 'author-genders' in this && this['author-genders'].length > 0;
+  if (dat_ok && this['author-genders'][0] == 'female') {
+    var auth_female = 1;
   } else {
-    var first_auth_female = 0
-  }
-  emit(yr + '_' + mo, first_auth_female);
+    var auth_female = 0;
+  };
+  emit(yr + '_' + mo, auth_female);
 };
 
-var reduceFunction1 = function(yr_mo, f) {
-  return Array.sum(f);
+var reduceFunction1 = function(yr_mo, fem) {
+  return Array.sum(fem);
 };
 
 db.crossref.mapReduce(
-  { query :
-    {'author-genders' :
-      {'$exists' : true}
-    }
-  },
   mapFunction1,
   reduceFunction1,
-  { out: "female_first_auth_by_yr_mo_counts" }
+  { out: "female_first_auth_by_yr_mo_counts" },
+  { query :
+    { '$and' :
+      [
+        {'author-genders' : {'$exists' : true} },
+        {'author-genders.1' : {'$exists' : true} }
+      ]
+    }
+  }
 )
