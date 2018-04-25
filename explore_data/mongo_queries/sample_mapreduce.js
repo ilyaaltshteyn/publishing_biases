@@ -17,5 +17,5 @@ var reduceFunction1 = function(yr_mo, f) {
 db.sample.mapReduce(
                      mapFunction1,
                      reduceFunction1,
-                     { out: "map_reduce_example" }
+                     { out: "female_first_author_by_yr_mo_counts" }
                    )
