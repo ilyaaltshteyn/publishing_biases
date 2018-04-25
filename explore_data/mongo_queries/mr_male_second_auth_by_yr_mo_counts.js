@@ -4,7 +4,7 @@ var mapFunction1 = function() {
   var yr = String(this.issued['date-parts'][0][0]);
   var mo = String(this.issued['date-parts'][0][1]);
   var dat_ok = 'author-genders' in this && this['author-genders'].length > 0;
-  if (dat_ok && this['author-genders'][1] == 'female') {
+  if (dat_ok && this['author-genders'][1] == 'male') {
     var target_gender = 1;
   } else {
     var target_gender = 0;
@@ -19,7 +19,7 @@ var reduceFunction1 = function(yr_mo, gender) {
 db.crossref.mapReduce(
   mapFunction1,
   reduceFunction1,
-  { out: "female_second_auth_by_yr_mo_counts" },
+  { out: "male_second_auth_by_yr_mo_counts" },
   { query :
     { '$and' :
       [

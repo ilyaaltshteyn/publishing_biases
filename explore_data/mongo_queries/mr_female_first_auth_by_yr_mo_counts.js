@@ -5,15 +5,15 @@ var mapFunction1 = function() {
   var mo = String(this.issued['date-parts'][0][1]);
   var dat_ok = 'author-genders' in this && this['author-genders'].length > 0;
   if (dat_ok && this['author-genders'][0] == 'female') {
-    var auth_female = 1;
+    var target_gender = 1;
   } else {
-    var auth_female = 0;
+    var target_gender = 0;
   };
-  emit(yr + '_' + mo, auth_female);
+  emit(yr + '_' + mo, target_gender);
 };
 
-var reduceFunction1 = function(yr_mo, fem) {
-  return Array.sum(fem);
+var reduceFunction1 = function(yr_mo, gender) {
+  return Array.sum(gender);
 };
 
 db.crossref.mapReduce(
