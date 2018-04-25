@@ -19,7 +19,7 @@ db.crossref.mapReduce(
     {'author-genders' :
       {'$exists' : true}
     }
-  }
+  },
   mapFunction1,
   reduceFunction1,
   { out: "female_first_auth_by_yr_mo_counts" }
