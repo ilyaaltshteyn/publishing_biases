@@ -2,7 +2,17 @@ import logging
 import re
 
 def get_gender(detector_instance, author):
-    """ Analyzes author dict to return one of several results relevant to project.
+    """ detector_instance is an instance of gender-guesser's gender.Detector().
+        author is a dict from a record in the mongo collection dat.crossref. It
+        may have a key with author's given name-- `given`. If it does, this
+        function will estimate the gender of the name. It will return one of
+        several possible result codes:
+            - unknown-data_failure
+            - unknown-no_first_name
+            - unknown-single_character_name
+            - unknown-initials_only
+            - unknown-estimation_failure
+            - any result possible from the detector_instance, except unknown.
     """
     if not isinstance(author, dict):
         return 'unknown-data_failure'
@@ -31,6 +41,8 @@ def get_gender(detector_instance, author):
         return 'unknown-code_failure'
 
 def set_gender(collection, record_id, genders):
+    """ Sets `author-genders` key for the record_id in mongo's dat.crossref. 
+    """
     collection.update(
         {"_id": record_id},
         {"$set":
@@ -39,9 +51,10 @@ def set_gender(collection, record_id, genders):
     )
 
 def get_cursor(collection):
-    """ Get cursor pointing at records without the field 'author-genders'.
-        Return True and a cursor if cursor has at least 1 records. Otherwise
-        returns False and None. This is to avoid using .count() on big cursor.
+    """ Gets cursor pointing at records without the field 'author-genders'.
+        Returns True and the cursor if cursor has at least 1 records. Otherwise
+        returns False and None. 
+        Much faster than using .count() on a large cursor.
     """
     c = collection.find({
         'author-genders' : { '$exists' : False },
