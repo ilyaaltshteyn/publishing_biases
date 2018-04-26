@@ -4,3 +4,4 @@ mongo/
 .ipynb_checkpoints
 *.log
 nohup.out
+*.csv
