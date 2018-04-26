@@ -1,3 +1,5 @@
+var set_xth_auth = 1, set_min_auths = 3, set_gender = "female";
+
 use dat
 
 var mapFunction1 = function() {
