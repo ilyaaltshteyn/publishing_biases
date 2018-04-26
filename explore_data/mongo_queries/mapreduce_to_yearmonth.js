@@ -1,8 +1,8 @@
 // set_min_auths and set_gender should have already been set outside.
-var min_auths_defined = typeof set_min_auths == 'undefined';
-var gender_defined = typeof set_gender == 'undefined';
-var xth_auth_defined = typeof set_xth_auth == 'undefined';
-if ( min_auths_defined || gender_defined || xth_auth_defined ) {
+var min_auths_undefined = typeof set_min_auths == 'undefined';
+var gender_undefined = typeof set_gender == 'undefined';
+var xth_auth_undefined = typeof set_xth_auth == 'undefined';
+if ( min_auths_undefined || gender_undefined || xth_auth_undefined ) {
     throw "Failed to define one of the required vars before running queries!";
 }
 
@@ -24,8 +24,7 @@ var reduceFunc = function(yr_mo, results) {
   return Array.sum(results);
 };
 
-var output_coll_name = set_gender + '_' + set_xth_auth + 'th_auth_papers_with_' + \
-  set_min_auths + 'or_more_authors_by_yr_mo_counts';
+var output_coll_name = set_gender + '_' + set_xth_auth + 'th_auth_papers_with_' + set_min_auths + 'or_more_authors_by_yr_mo_counts';
 
 db.crossref.mapReduce(
   map2YearMonth,
