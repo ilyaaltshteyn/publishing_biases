@@ -1,3 +1,5 @@
+var set_xth_auth = 2, set_min_auths = 4, set_gender = 'male';
+
 use dat
 
 // set_min_auths and set_gender should have already been set outside.

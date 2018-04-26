@@ -1,4 +1,4 @@
-logfile = "/home/ubuntu/publishing_biases/explore_data/mongo_queries/run_queries.log"
+logfile="/home/ubuntu/publishing_biases/explore_data/mongo_queries/run_queries.log"
 
 function set_opts() {
   opts="var set_xth_auth = $xth_auth, set_min_auths = $min_auths, set_gender = '$gend';"
