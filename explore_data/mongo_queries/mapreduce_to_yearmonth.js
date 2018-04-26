@@ -1,7 +1,7 @@
 // set_min_auths and set_gender should have already been set outside.
-var min_auths_defined = typeof set_min_auths == 'undefined'
-var gender_defined = typeof set_gender == 'undefined'
-var xth_auth_defined = typeof set_xth_auth == 'undefined'
+var min_auths_defined = typeof set_min_auths == 'undefined';
+var gender_defined = typeof set_gender == 'undefined';
+var xth_auth_defined = typeof set_xth_auth == 'undefined';
 if ( min_auths_defined || gender_defined || xth_auth_defined ) {
     throw "Failed to define one of the required vars before running queries!";
 }
