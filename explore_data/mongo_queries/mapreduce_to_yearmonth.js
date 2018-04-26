@@ -1,3 +1,5 @@
+use dat
+
 // set_min_auths and set_gender should have already been set outside.
 var min_auths_undefined = typeof set_min_auths == 'undefined';
 var gender_undefined = typeof set_gender == 'undefined';
@@ -5,8 +7,6 @@ var xth_auth_undefined = typeof set_xth_auth == 'undefined';
 if ( min_auths_undefined || gender_undefined || xth_auth_undefined ) {
     throw "Failed to define one of the required vars before running queries!";
 }
-
-use dat
 
 var map2YearMonth = function() {
   var yr = String(this.issued['date-parts'][0][0]);
