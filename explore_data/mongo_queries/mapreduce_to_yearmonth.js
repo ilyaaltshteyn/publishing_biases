@@ -5,7 +5,7 @@ var min_auths_undefined = typeof set_min_auths == 'undefined';
 var gender_undefined = typeof set_gender == 'undefined';
 var xth_auth_undefined = typeof set_xth_auth == 'undefined';
 if ( min_auths_undefined || gender_undefined || xth_auth_undefined ) {
-    throw "Failed to define one of the required vars before running queries!";
+    throw 'Failed to define one of the required vars before running queries!';
 }
 
 var map2YearMonth = function() {
