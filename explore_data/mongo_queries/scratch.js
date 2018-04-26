@@ -1,39 +1,38 @@
 use dat
-// Get just journal articles that have author genders assigned
-db.crossref.findOne(
-  { $and :
-    [
-      {'author-genders' : {$exists : true } },
-      {'type' : 'journal-article'}
-    ]
-  },
+
+var set_min_auths = 1;
+
+var map2YearMonth = function() {
+  var yr = String(this.issued['date-parts'][0][0]);
+  var mo = String(this.issued['date-parts'][0][1]);
+  if (this['author-genders'][0] == gender) {
+    var result = this['author-genders'].length;
+  } else {
+    var result = this['author-genders'].length;
+  };
+  emit(yr + '_' + mo, result);
+};
+
+var reduceFunc = function(yr_mo, results) {
+  return Math.min(results);
+};
+
+// Set query for minimal gender-authors array length
+var q = {};
+var k = 'author-genders.' + String(set_min_auths - 1);
+var v = {'$exists' : true};
+q[k] = v;
+
+db.crossref.mapReduce(
+  map2YearMonth,
+  reduceFunc,
   {
-    'author-genders' : 1,
-    'issued' : 1,
-    'subject' : 1,
-    'author' : 1
+    out: {replace : "test_mr" },
+    scope : { gender : 'female', min_authors : set_min_auths },
+    query :
+    { '$and' :
+      [ {'author-genders' : {'$exists' : true} }, q ]
+    },
+    limit : 100
   }
 )
-
-// db.crossref.find(
-//   {$and :
-//     [
-//       {'author-genders' : {$exists : false }},
-//       {'author' : {$exists : true } }
-//     ]
-//   }
-// ).count()
-
-
-// Get date from date-parts
-db.crossref.findOne({'issued.date-parts.0.0' : 2017})
-
-// Get author-genders for a given year and month
-db.findOne({'$and' :
-  [
-    {'author-genders' : {'$exists' : true}},
-    {'type' : 'journal-article'}
-    {'issued.date-parts.0.0' : 2017},
-    {'issued.date-parts.0.1' : 1},
-  ]
-}, {'author-genders' : 1})

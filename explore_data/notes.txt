@@ -1,3 +1,13 @@
+Next:
+1. Clear out all the collections in mongo
+2. Generalize the mapreduce function:
+    * Make it pull Xth auth by Y time period for papers with Z authors.
+    * Require that it takes in a description of the data subset.
+    * Do some accuracy checks.
+3. Write a script that exports a results collection to csv.
+4. Figure out how to analyze the stuff.
+
+Data description:
 * Key 'author' has a list of authors.
   * For each one, there might be
     1. An affiliation, under 'affiliation'
@@ -13,6 +23,9 @@
 * Key 'title' has the title of the work
 * Key 'type' is 'journal-article' or 'book-chapter'
 
+
+Old notes/Done:
+
 One possible strategy to tag everything:
 
 1. Get a cursor to point at all records that don't have the field "author-genders"
@@ -23,7 +36,7 @@ One possible strategy to tag everything:
       unknown-no_first_name, unknown-too_short_or_initials, unknown-code_failure
 4. Query to get all "author-genders" lists
 
-# Organize dataset for some analysis. Why did I even put it into mongo :P
+# Organize dataset for some analysis.
 - I need to get the count of each author-gender in each authorship position,
   by month and by topic.
   * One possible approach:
