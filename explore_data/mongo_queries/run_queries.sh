@@ -10,7 +10,7 @@ function set_opts() {
 
 function wait() {
   # Count running queries; if > 1 then sleep, else continue
-  COUNT=$(mongo < countCurrentOp.js --quiet | tail -1)
+  COUNT=$(mongo < countCurrentOp.js --quiet | tail -1) # last line is # of running queries
   while [ $COUNT -ge 2 ]
   do
       echo "Sleeping 15m while waiting for $COUNT queries to finish."
