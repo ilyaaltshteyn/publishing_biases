@@ -15,6 +15,9 @@ if ( xth_auth_undefined || num_auths_undefined || gender_undefined || pubtype_un
 var map2year = function() {
   var yr = String(this.issued['date-parts'][0][0]);
   var dat_ok = 'author-genders' in this;
+  if (! dat_ok) {
+    emit(yr, 0)
+  }
 
   // Manipulate comparison operator
   // Not ideal way to do this
