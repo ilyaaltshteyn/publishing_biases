@@ -27,63 +27,63 @@ function wait() {
 set_params 0 3 "female" "journal-article" "e"
 
 # Second auth, == 3 auths, female author, journal-articles
-set_params 1 3 "female" "journal-article"  "e"
+set_params 1 3 "female" "journal-article" "e"
 
 # First auth, == 3 auths, male author, journal-articles
-set_params 0 3 "male" "journal-article"  "e"
+set_params 0 3 "male" "journal-article" "e"
 
 # Second auth, == 3 auths, male author, journal-articles
-set_params 1 3 "male" "journal-article"  "e"
+set_params 1 3 "male" "journal-article" "e"
 
 wait()
 
 # First auth, == 4 auths, female author, journal-articles
-set_params 0 4 "female" "journal-article"  "e"
+set_params 0 4 "female" "journal-article" "e"
 
 # Second auth, == 4 auths, female author, journal-articles
-set_params 1 4 "female" "journal-article"  "e"
+set_params 1 4 "female" "journal-article" "e"
 
 # Third auth, == 4 auths, female author, journal-articles
-set_params 2 4 "female" "journal-article"  "e"
+set_params 2 4 "female" "journal-article" "e"
 
 # First auth, == 4 auths, male author, journal-articles
-set_params 0 4 "male" "journal-article"  "e"
+set_params 0 4 "male" "journal-article" "e"
 
 wait()
 
 # Second auth, == 4 auths, male author, journal-articles
-set_params 1 4 "male" "journal-article"  "e"
+set_params 1 4 "male" "journal-article" "e"
 
 # Third auth, == 4 auths, male author, journal-articles
-set_params 2 4 "male" "journal-article"  "e"
+set_params 2 4 "male" "journal-article" "e"
 
 # First auth, >= 5 auths, female author, journal-articles
-set_params 0 5 "female" "journal-article"  "ge"
+set_params 0 5 "female" "journal-article" "ge"
 
 # Second auth, >= 5 auths, female author, journal-articles
-set_params 1 5 "female" "journal-article"  "ge"
+set_params 1 5 "female" "journal-article" "ge"
 
 wait()
 
 # Third auth, >= 5 auths, female author, journal-articles
-set_params 2 5 "female" "journal-article"  "ge"
+set_params 2 5 "female" "journal-article" "ge"
 
 # Fourth auth, >= 5 auths, female author, journal-articles
-set_params 3 5 "female" "journal-article"  "ge"
+set_params 3 5 "female" "journal-article" "ge"
 
 # First auth, >= 5 auths, male author, journal-articles
-set_params 0 5 "male" "journal-article"  "ge"
+set_params 0 5 "male" "journal-article" "ge"
 
 # Second auth, >= 5 auths, male author, journal-articles
-set_params 1 5 "male" "journal-article"  "ge"
+set_params 1 5 "male" "journal-article" "ge"
 
 wait()
 
 # Third auth, >= 5 auths, male author, journal-articles
-set_params 2 5 "male" "journal-article"  "ge"
+set_params 2 5 "male" "journal-article" "ge"
 
 # Fourth auth, >= 5 auths, male author, journal-articles
-set_params 3 5 "male" "journal-article"  "ge"
+set_params 3 5 "male" "journal-article" "ge"
 
 ## Book chapters
 
@@ -91,32 +91,32 @@ set_params 3 5 "male" "journal-article"  "ge"
 set_params 0 3 "female" "book-chapter" "e"
 
 # Second auth, == 3 auths, female author, book-chapter
-set_params 1 3 "female" "book-chapter"  "e"
+set_params 1 3 "female" "book-chapter" "e"
 
 wait()
 
 # First auth, == 3 auths, male author, book-chapter
-set_params 0 3 "male" "book-chapter"  "e"
+set_params 0 3 "male" "book-chapter" "e"
 
 # Second auth, == 3 auths, male author, book-chapter
-set_params 1 3 "male" "book-chapter"  "e"
+set_params 1 3 "male" "book-chapter" "e"
 
 # First auth, >= 4 auths, female author, book-chapter
 set_params 0 4 "female" "book-chapter" "ge"
 
 # Second auth, >= 4 auths, female author, book-chapter
-set_params 1 4 "female" "book-chapter"  "ge"
+set_params 1 4 "female" "book-chapter" "ge"
 
 wait()
 
 # Third auth, >= 4 auths, female author, book-chapter
-set_params 2 4 "female" "book-chapter"  "ge"
+set_params 2 4 "female" "book-chapter" "ge"
 
 # First auth, >= 4 auths, male author, book-chapter
-set_params 0 4 "male" "book-chapter"  "ge"
+set_params 0 4 "male" "book-chapter" "ge"
 
 # Second auth, >= 4 auths, male author, book-chapter
-set_params 1 4 "male" "book-chapter"  "ge"
+set_params 1 4 "male" "book-chapter" "ge"
 
 # Third auth, >= 4 auths, male author, book-chapter
-set_params 2 4 "male" "book-chapter"  "ge"
+set_params 2 4 "male" "book-chapter" "ge"
