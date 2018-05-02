@@ -1,0 +1,53 @@
+Bibliometrics: Global gender disparities in science
+Vincent Larivière, Chaoqun Ni, Yves Gingras, Blaise Cronin& Cassidy R. Sugimoto
+2013
+https://www.nature.com/news/bibliometrics-global-gender-disparities-in-science-1.14321#/b7
+
+  * Nature Comment article
+  * Great lit review of research on the topic
+  * Strong, global analysis of patterns of authorship and citation counts
+    * Still suffers from the base rates problem, I THINK (i'm tired, read again in the morning)!!
+
+
+=======
+West JD, Jacquet J, King MM, Correll SJ, Bergstrom CT (2013) The Role of Gender in Scholarly Authorship. PLoS ONE 8(7): e66212. https://doi.org/10.1371/journal.pone.0066212
+
+  * They do first author female vs overall proportion in population
+    * This is pretty good, but not as clean as first vs last
+    * They don't do the analysis over time well
+  * Do network analysis to split papers into fields and look into papers by field
+  * Create an interactive tool to explore some of the data
+  * Claim that "From 1990 to present, women are no longer severely underrepresented
+    as first author, but they are increasingly underrepresented as last author"
+      * I doubt the "1990" part of this claim, considering my results
+
+=======
+Jagsi, Reshma, et al. "The “gender gap” in authorship of academic medical literature—a 35-year perspective." New England Journal of Medicine 355.3 (2006): 281-287.
+
+  * Medicine only
+  * Look mostly at trends over time in % women (base rates only)
+    * % in first auth, last auth, grad student and professorship.
+  * Look only at first vs last authorship, which is affected by the base rate of
+    women in academia.
+      * So this paper isn't really about discovering bias.
+=======
+Reena Sidhu1, Praveen Rajashekhar1, Victoria L Lavin1, Joanne Parry1, James Attwood1, Anita Holdcroft2, David S Sanders1
+The gender imbalance in academic medicine: a study of female authorship in the United Kingdom
+https://doi.org/10.1258/jrsm.2009.080378
+
+  * Very similar to Jagsi, Reshma et al, 2006.
+=======
+A gender gap in the dermatology literature? Cross-sectional analysis of manuscript authorship trends in dermatology journals during 3 decades
+Jamison D. Feramisco, MD, PhD, Justin J. Leitenberger, BS, Shelley I. Redfern, BS, Aihua Bian, MPH, Xian-Jin Xie, PhD, Jack S. Resneck Jr., MD. 2009
+
+  * "Female dermatologists are authoring publications in growing numbers that match
+    or exceed their prevalence in the academic and overall workforce."
+  * Dermatology journals only
+  * Another base rates only paper.
+-------
+Ideas for own project:
+
+1. Do not focus on absolute rates of authorship by women.
+  * Can be a secondary statistic.
+  * Emphasize this lack of focus, and an interest in documenting bias.
+2.
