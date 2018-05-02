@@ -13,7 +13,7 @@ function wait() {
   COUNT=$(mongo < countCurrentOp.js --quiet | tail -1) # last line is # of running queries
   while [ $COUNT -ge 2 ]
   do
-      echo "Sleeping 15m while waiting for $COUNT queries to finish."
+      echo "Sleeping 15m while waiting for $COUNT queries to finish." >> $logfile
       sleep 15m
       COUNT=$(mongo < countCurrentOp.js --quiet | tail -1)
   done
