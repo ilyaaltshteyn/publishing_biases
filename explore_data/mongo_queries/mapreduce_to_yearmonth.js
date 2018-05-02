@@ -17,24 +17,25 @@ var map2year = function() {
   var dat_ok = 'author-genders' in this;
   if (! dat_ok) {
     emit(yr, 0)
+  } else {
+
+    // Manipulate comparison operator
+    // Not ideal way to do this
+    if (authcount_comparison == 'ge') {
+      var length_ok = this['author-genders'].length >= min_auths;
+    } else {
+      var length_ok = this['author-genders'].length == min_auths;
+    };
+
+    var type_ok = this['type'] == pubtype;
+    var gender_ok = this['author-genders'][xth_auth] == gender;
+    if (dat_ok && length_ok && type_ok && gender_ok) {
+      var result = 1;
+    } else {
+      var result = 0;
+    };
+    emit(yr, result);
   }
-
-  // Manipulate comparison operator
-  // Not ideal way to do this
-  if (authcount_comparison == 'ge') {
-    var length_ok = this['author-genders'].length >= min_auths;
-  } else {
-    var length_ok = this['author-genders'].length == min_auths;
-  };
-
-  var type_ok = this['type'] == pubtype;
-  var gender_ok = this['author-genders'][xth_auth] == gender;
-  if (dat_ok && length_ok && type_ok && gender_ok) {
-    var result = 1;
-  } else {
-    var result = 0;
-  };
-  emit(yr, result);
 };
 
 var reduce2count = function(yr_mo, results) {
