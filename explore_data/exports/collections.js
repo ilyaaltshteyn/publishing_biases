@@ -1,0 +1,2 @@
+use dat
+show collections
