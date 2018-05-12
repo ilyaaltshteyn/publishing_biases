@@ -17,20 +17,36 @@ Ideas for this work:
 
 
 Ideas for the writeup:
-* Point out the "base rates" problem-- it's less convincing to say that a bias exists in academia if you don't account for the different rates of men and women entering academia and working on projects that end up being published. Most existing work does not account for the base rates problem.
+* I'm expanding to book chapters and patents
+* The "base rates" problem-- it's less convincing to say that a bias exists in academia if you don't account for the different rates of men and women entering academia and working on projects that end up being published. Most existing work does not account for the base rates problem.
   * The base rates problem fails to account for the effect of changing gender representation in academia over time.
     * My approach may actually also have this problem
   * The base rates problem fails to show pure bias, because it doesn't account for the proportion of men and women in academia to begin with.
-* Point out that work that does account for the base rates problem does not do this to my satisfaction, because last authorship is complex, and the best paper out there includes it in the base rate to be compared against.
 * Point out that little work exists to look at the effect over time. And where it does exist, it usually hits the base rate problem. Or in the case of that one good PLOS paper, the results don't quite match my own.
 
 
-Next:
-1. Clean up the generalized mapreduce scripts
-2. Add more params to mapreduce scripts for planned queries.
-3. Write a script that exports a results collection to csv.
+Data description for patents data in Postgres:
+* rawinventor and pct_data downloaded from USPTO's website patentsview.org:
+  http://www.patentsview.org/download/
+* pct_data
+  * total count = 1,146,846
+  * patent_id -- used to relate to rawinventor
+  * date -- date patent was published or filed
+    * there starts to be data for every year beginning with 1980
+  * doc_type -- whether the document has been published or just filed
+    * can be pct_application or wo_grant
+    * let's limit to pct_application
+      * count reduces to 551,818
+  * country -- country of filing
+* rawinventor
+  * total count = 15,334,570
+  * patent_id -- used to relate to pct_data
+  * name_first -- first name of author
+  * sequence -- order in which author appears in filing
+    * Verified this is correct by looking up several patents on US govt site
 
-Data description:
+
+Data description for Crossref data in mongo:
 * Key 'author' has a list of authors.
   * For each one, there might be
     1. An affiliation, under 'affiliation'
