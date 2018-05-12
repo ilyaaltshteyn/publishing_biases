@@ -44,10 +44,55 @@ Jamison D. Feramisco, MD, PhD, Justin J. Leitenberger, BS, Shelley I. Redfern, B
     or exceed their prevalence in the academic and overall workforce."
   * Dermatology journals only
   * Another base rates only paper.
--------
-Ideas for own project:
 
-1. Do not focus on absolute rates of authorship by women.
-  * Can be a secondary statistic.
-  * Emphasize this lack of focus, and an interest in documenting bias.
-2.
+=======
+Scientific authorship: Credit and intellectual property in science
+Book
+https://content.taylorfrancis.com/books/download?dac=C2010-0-31927-2&isbn=9781135380922&format=googlePreviewPdf
+
+There's nothing in here about gender as far as I can tell from the preview, but
+lots of interesting anthropology in there.
+=======
+Gender-specific patterns in patenting and publishing
+https://doi.org/10.1016/j.respol.2009.01.019
+
+This talks about who is most likely to get denied authorship.
+
+Claim that female scientists patent less than male scientists with similar publication records, based on these references:
+(Breschi et al., 2005; Azoulay et al., 2007;
+Stephan et al., 2007; see also Whittington and Smith-Doerr, 2008).
+"This may be explained by Ding et al.’s (2006) and Murray and Graham’s (2007) analysis of longitudinal data on careers and field interviews, which show that women have fewer connections to operators in the marketplace than men. This diminishes their opportunities to commercialize their research results or to cash in their reputation through consultancy or participation in high-tech companies." page 52-53
+
+
+=======
+Gender and Commercial Science: Women’s Patenting in the Life Sciences
+http://www.reed.edu/sociology/faculty/whittington/docs/Whittington_SmithDoerr_JTT.pdf
+
+"There is remarkable similarity between men and
+women in average inventor sequence. As Table 1
+shows, there is no significant difference between
+the average inventor sequence of female and male
+scientists. The average male and female scientist in
+this sample is at the 2.2 and 2.5 position in the
+inventor sequence, respectively. There are no
+gender differences across employment sectors, and
+no clear increasing or decreasing trends among the
+sexes over time. On this measure, men and women
+who are already involved in patenting remain
+remarkably similar." page 361
+
+=======
+The Academic Advantage: Gender Disparities in Patenting
+http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0128000
+
+Shows that women's patenting rate has increased over the past ~50 years, and demonstrates the effect across different professional contexts (academia vs industry vs government).
+
+=======
+Gender Differences in Patenting in the Academic Life Sciences
+Waverly W. Ding et al., Science, 2006
+http://faculty.haas.berkeley.edu/tstuart/publications/2006/Gender%20Differences%20in%20Patenting.pdf
+
+Investigate the scope and causes of the gender gap in patenting among life scientists.
+Use a longitudinal approach to look at 4k+ scientists' patenting patterns.
+
+=======

@@ -1,1 +1,0 @@
-mongo < currentOp.js
