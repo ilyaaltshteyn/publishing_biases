@@ -25,6 +25,7 @@ working = True
 finished = 0
 
 while working:
+    # Get the next 1k records
     read_cur.execute(read_q)
     results = read_cur.fetchall()
     if read_cur.rowcount == 0:
@@ -32,11 +33,16 @@ while working:
 
     try:
         for row in results:
-            auth = get_postgres_author(row)  # grab author first name
-            gend = get_gender(detector, auth)  # genderize name
+            # Get info for estimating + setting gender
+            auth = get_postgres_author(row)
+            gend = get_gender(detector, auth)
             uuid = get_postgres_uuid(row)
 
+            # Set gender
             set_postgres_gender(write_cur, uuid, gend)
+            conn.commit()
+
+            # Track progress
             finished += 1
             if finished % 10000 == 0:
                 logging.info('Finished {} records at {}'.format(
