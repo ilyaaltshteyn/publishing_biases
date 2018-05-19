@@ -1,3 +1,17 @@
+=======
+The gender gap in science: How long until women are equally represented?
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5908072/
+
+  * PLOS Biology
+  * Find that women are over-represented as first authors but underrepresented as last authors
+  * Estimate that there won't be as many women as men for another 80+ years in academic publishing
+  * Use a large sample of 36,000 million authors from
+    * PubMed and arXiv databases
+    * over 100 countries and over 6000 journals from all fields
+  * Point out that the first author trend contradicts prior research
+  * Have an online tool to explore the data: https://lukeholman.github.io/genderGap/
+
+=======
 Bibliometrics: Global gender disparities in science
 Vincent Larivière, Chaoqun Ni, Yves Gingras, Blaise Cronin& Cassidy R. Sugimoto
 2013
@@ -8,6 +22,12 @@ https://www.nature.com/news/bibliometrics-global-gender-disparities-in-science-1
   * Strong, global analysis of patterns of authorship and citation counts
     * Still suffers from the base rates problem, I THINK (i'm tired, read again in the morning)!!
 
+=======
+Understanding current causes of women's underrepresentation in science
+Stephen J. Ceci and Wendy M. Williams, PNAS
+http://www.pnas.org/content/108/8/3157
+
+General review of the literature on discrimination against women in academia. It's critical of some studies and methods, and the authors believe many researchers are focusing on the wrong things.
 
 =======
 West JD, Jacquet J, King MM, Correll SJ, Bergstrom CT (2013) The Role of Gender in Scholarly Authorship. PLoS ONE 8(7): e66212. https://doi.org/10.1371/journal.pone.0066212
@@ -95,4 +115,9 @@ http://faculty.haas.berkeley.edu/tstuart/publications/2006/Gender%20Differences%
 Investigate the scope and causes of the gender gap in patenting among life scientists.
 Use a longitudinal approach to look at 4k+ scientists' patenting patterns.
 
+=======
+Science on the Periphery: Bridging the Information Divide
+Arunachalam Subbiah, 2005
+
+Book about the general subject of quantifying trends in science.
 =======

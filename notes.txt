@@ -91,3 +91,12 @@ One possible strategy to tag everything:
           {'issued.date-parts.0.1' : 1}
         ]
       }, {'author-genders' : 1, 'subject' : 1})
+
+
+----
+Citations data:
+
+DBPedia citations dataset.
+Downloaded from http://downloads.dbpedia.org/temporary/citations/enwiki-20160305-citation-data.ttl.bz2
+
+Here's a link to a data analysis challenge that DBPedia had for this dataset: https://www.mail-archive.com/dbpedia-discussion@lists.sourceforge.net/msg07762.html
