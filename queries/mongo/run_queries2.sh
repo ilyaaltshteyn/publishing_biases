@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-logfile="/home/ubuntu/publishing_biases/explore_data/mongo_queries/run_queries.log"
+logfile="/home/ubuntu/publishing_biases/queries/mongo/run_queries.log"
 queries_started=0
 
 function query() {
