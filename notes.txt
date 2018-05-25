@@ -14,6 +14,11 @@ Ideas for this work:
 * Metric(?): probability of first vs obscure (non-last) authorship.
   * Stats: this probability, by sex, per year, with a binomial confidence interval
 * Analysis: strength of effect vs number of authors on the paper.
+* Analysis: what are the odds of being first author if you're a man vs woman, by year?
+  * What is the odds ratio of male:female by year?
+  * Do the odds ratios of male:female correlate across years for different publication types?
+    - If yes, this suggests an outside cause
+
 
 
 Ideas for the writeup:
