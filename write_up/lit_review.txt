@@ -1,7 +1,22 @@
+Elite male faculty in the life sciences employ fewer women
+2014, PNAS
+http://www.pnas.org/content/111/28/10107#ref-3
+
+  * Example of bias
+
+======
+Leaks in the pipeline: separating demographic inertia from ongoing gender differences in academia
+2012, Proceedings B
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415898/
+
+"We show that the hiring and retention of women in academia have been affected by both demographic inertia and gender differences, but that the relative influence of gender differences appears to be dwindling for most disciplines and career transitions. Our model enables us to identify the two key non-structural bottlenecks restricting female participation in academia: choice of undergraduate major and application to faculty positions. "
+
+=======
+
 Is the gender gap narrowing in science and engineering? Chapter in a UNESCO report, 2015
 http://unesdoc.unesco.org/images/0023/002354/235406e.pdf
 
-a=======
+=======
 The gender gap in science: How long until women are equally represented?
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5908072/
 
