@@ -1,5 +1,5 @@
 html, body, * {
-	font-family: Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;;
 	text-align: center;
 	font-size: 14px 65%;
 }
@@ -15,7 +15,7 @@ html, body, * {
 } */
 
 h1 {
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
     letter-spacing: 1px;
     margin: 0 auto;
@@ -34,12 +34,22 @@ div#chart {
 	/* box-shadfow: 3px 3px 3px lightgrey; */
 }
 
-.bar.positive {
-  fill: darkred;
+.bar.female {
+  fill: #AB1254;
 }
 
-.bar.negative {
-  fill: steelblue;
+.bar.male {
+  fill: #0EE5AE;
+}
+
+.line.female {
+	stroke: #AB1254;
+	stroke-width: 2px;
+}
+
+.line.male {
+	stroke: #0EE5AE;
+	stroke-width: 2px;
 }
 
 g.infowin {
@@ -55,7 +65,7 @@ g.infowin text,
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #828282;
   shape-rendering: crispEdges;
 }
 
@@ -73,24 +83,28 @@ path.domain {
 }
 
 .title_label {
-  font-size: .95em;
-  font-weight: bold;
-  font-color: black;
+  font-size: .9em;
+  font-weight: 400;
+	fill: #292929;
   text-anchor: left;
+}
+
+.barlabel {
+	text-anchor: left;
 }
 
 .annotation_label {
 	font: 11px sans-serif;
-  /* fill:grey; */
+  fill: #484848;
 }
 
 #arrow {
-	fill: black;
+	fill: #484848;
 	opacity: .85;
 }
 
 #arrow_body {
-	stroke: black;
+	stroke: #484848;
 	stroke-opacity: .7;
 	stroke-width: 1.3;
 }

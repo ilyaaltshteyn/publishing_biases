@@ -13,7 +13,7 @@ var y = d3.scale.linear()
     .range([height, 0]);
 
 var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .2);
+    .rangeRoundBands([0, width], .15);
 
 var xAxisScale = d3.scale.linear()
     .domain([1940, 2017])
@@ -36,7 +36,7 @@ var yAxis = d3.svg.axis()
     .tickSize(0)
     .tickPadding(10);
 
-var svg = d3.select("#chart").append("svg")
+var svg = d3.select("#chart1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -54,9 +54,9 @@ d3.csv("data1.csv", type, function(error, data) {
         .attr("class", function(d) {
 
             if (d.proportional_difference < 0){
-                return "bar negative";
+                return "bar male";
             } else {
-                return "bar positive";
+                return "bar female";
             }
 
         })
@@ -84,13 +84,27 @@ d3.csv("data1.csv", type, function(error, data) {
         .attr("width", x.rangeBand())
         .attr("height", function(d) {
             return Math.abs(y(d.proportional_difference) - y(0));
-        });
-        // .on("mouseover", function(d){
-        //     d3.select("#_yr")
-        //         .text("annotation!: ");
-        //     d3.select("#degrree")
-        //         .text(d.proportional_difference + "°C");
-        // });
+        })
+        .attr("opacity", .6);
+
+    svg.selectAll(".line")
+        // .attr("class", "x axis")
+        .data(data)
+        .enter()
+        .append("line")
+        .attr("class", function(d) {
+
+            if (d.proportional_difference < 0){
+                return "line male";
+            } else {
+                return "line female";
+            }
+
+        })
+        .attr("y1", function(d) { return Math.abs(y(d.proportional_difference));})
+        .attr("y2", function(d) { return Math.abs(y(d.proportional_difference));})
+        .attr("x1", function(d) { return x(d._id); } )
+        .attr("x2", function (d) {return x(d._id) + x.rangeBand(); });
 
     svg.append("g")
         .attr("class", "y axis")
@@ -137,10 +151,10 @@ d3.csv("data1.csv", type, function(error, data) {
 
     // Add the title
   	svg.append("text")
+      .attr("class", "title_label")
       .attr("x", 0)
       .attr("y", 24)
-      .text("Chance of being 1st author depends on gender")
-  		.attr("class", "title_label");
+      .text("Likelihood of being 1st author depends on gender");
 
     // svg.append("line")
     // 		.attr("x1", x(1961) + 5)
@@ -151,14 +165,14 @@ d3.csv("data1.csv", type, function(error, data) {
 
     svg.append("g")
         .append("text")
-        .text("In 1961, a man would have had a 40% better chance")
+        .text("In 1961, a man had a 40% better chance")
         .attr("x", x(1961) + 50)
     		.attr("y", y(-.44))
         .attr("class", "annotation_label");
 
     svg.append("g")
         .append("text")
-        .text("of being given first author credit than a woman.")
+        .text("of being first author than a woman.")
         .attr("x", x(1961) + 50)
     		.attr("y", y(-.47))
         .attr("class", "annotation_label");
@@ -166,14 +180,14 @@ d3.csv("data1.csv", type, function(error, data) {
     var annx3 = x(1983) + 33;
     svg.append("g")
         .append("text")
-        .text("In the late '90s and early 2000's, gender alone did")
+        .text("At the turn of the century, gender alone no longer")
         .attr("x", annx3)
     		.attr("y", y(.26))
         .attr("class", "annotation_label");
 
     svg.append("g")
         .append("text")
-        .text("not affect an author's chances of being first author.")
+        .text("affected an author’s chance of being first author.")
         .attr("x", annx3)
         .attr("y", y(.23))
         .attr("class", "annotation_label");
